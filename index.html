@@ -19,26 +19,77 @@
   </head>
 
   <body>
+    <header>
+      <img src="./resources/images/logo.svg" alt="" class="logo-image">
+    </header>
 
-    Bill
+    <main>
+      <div class="main-left-column">
+        <div class="input-row">
+          <label for="">Bill</label>
+          <div class="input-container">
+            <img src="./resources/images/icon-dollar.svg" alt="" class="input-icon-image">
+            <input type="number" name="" id="bill-input">
+          </div>
+        </div>
 
-    Select Tip %
-    5%
-    10%
-    15%
-    25%
-    50%
-    Custom
+        <div class="tips-selection-column">
+          <label for="">Select Tip %</label>
+          <div class="tip-grids-container">
+            <div class="grid-item">
+              <button class="tip-button" id="five">5%</button>
+            </div>
+            <div class="grid-item">
+              <button class="tip-button" id="ten">10%</button>
+            </div>
+            <div class="grid-item">
+              <button class="tip-button" id="fifteen">15%</button>
+            </div>
+            <div class="grid-item">
+              <button class="tip-button" id="twenty-five">25%</button>
+            </div>
+            <div class="grid-item">
+              <button class="tip-button" id="fifty">50%</button>
+            </div>
+            <div class="grid-item">
+              <input type="number" name="" id="custom">
+            </div>
+          </div>
+        </div>
 
-    Number of People
+        <div class="input-row">
+          <div class="label-row">
+            <label for="">Number of People</label>
+            <p class="alert-text">Can't be zero</p>
+          </div>
+          <div class="input-container">
+            <img src="./resources/images/icon-person.svg" alt="" class="input-icon-image">
+            <input type="number" name="" id="">
+          </div>
+        </div>
+      </div>
 
-    Tip Amount
-    / person
+      <div class="main-right-column">
+        <div>
+          <div class="amount-output-row">
+            <div class="amount_output_left_column">
+              <p class="top-white-text">Tip Amount</p>
+              <p class="down-light-text">/ person</p>
+            </div>
+            <p>$<span id="tip-amount-output">0.00</span></p>
+          </div>
+          <div class="amount-output-row">
+            <div class="amount_output_left_column">
+              <p class="top-white-text">Total</p>
+              <p class="down-light-text">/ person</p>
+            </div>
+            <p>$<span id="total-amount-output">0.00</span></p>
+          </div>
+        </div>
 
-    Total
-    / person
-
-    Reset
+        <button class="reset-button" id="reset-button">Reset</button>
+      </div>
+    </main>
 
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

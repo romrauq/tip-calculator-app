@@ -30,11 +30,20 @@ body {
 	justify-content: space-between;
 	background-color: var(--Light-Grayish-Cyan);
 }
-header {
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	margin: auto 0;
+}
+.logo-container {
+	display: flex;
+	justify-content: center;
 }
 .logo-image {
+	width: 70px;
 }
-main {
+.main-application-container {
 	font-family: Space Mono;
 	font-size: 24px;
 	display: flex;
@@ -83,6 +92,7 @@ label {
 	padding: 5px;
 	width: 280px;
 	border: none;
+	cursor: pointer;
 }
 .input-field:focus {
 	outline: none;
@@ -129,6 +139,11 @@ label {
 	width: 100px;
 	border: 2px solid var(--White);
 	border-radius: 5px;
+	transition: 0.7s;
+	cursor: pointer;
+}
+.grid-custom-input:hover {
+	border: 2px solid var(--Strong-Cyan);
 }
 .grid-custom-input:focus {
 	outline: none;
@@ -178,13 +193,14 @@ label {
 	text-transform: uppercase;
 	font-weight: 600;
 	padding: 10px;
-	background-color: var(--Strong-Cyan);
+	background-color: #0d686d;
 	border-radius: 5px;
 	border: none;
 }
 .reset-button-completed {
 	color: var(--Very-Dark-Cyan);
 	background-color: var(--Strong-Cyan);
+	cursor: pointer;
 }
 .attribution {
 	font-size: 11px;

@@ -5,6 +5,7 @@ const fifteen = document.getElementById("fifteen");
 const twenty_five = document.getElementById("twenty-five");
 const fifty = document.getElementById("fifty");
 const custom_tip = document.getElementById("custom-tip");
+const alert_text = document.getElementById("alert-text");
 const people_input = document.getElementById("people-input");
 const tip_amount = document.getElementById("tip-amount-output");
 const total_amount = document.getElementById("total-amount-output");

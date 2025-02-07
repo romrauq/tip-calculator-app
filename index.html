@@ -10,78 +10,81 @@
   </head>
 
   <body>
-    <header>
-      <img src="./resources/images/logo.svg" alt="" class="logo-image">
-    </header>
 
     <main>
-      <div class="main-left-column">
-        <div class="input-row">
-          <label for="">Bill</label>
-          <div class="input-container">
-            <img src="./resources/images/icon-dollar.svg" alt="" class="input-icon-image">
-            <input type="number" name="" id="bill-input" class="input-field">
-          </div>
-        </div>
-
-        <div class="tips-selection-column">
-          <label for="">Select Tip %</label>
-          <div class="tip-grids-container">
-            <div class="grid-item">
-              <button class="tip-button" id="five">5%</button>
-            </div>
-            <div class="grid-item">
-              <button class="tip-button" id="ten">10%</button>
-            </div>
-            <div class="grid-item">
-              <button class="tip-button" id="fifteen">15%</button>
-            </div>
-            <div class="grid-item">
-              <button class="tip-button" id="twenty-five">25%</button>
-            </div>
-            <div class="grid-item">
-              <button class="tip-button tip-button-selected" id="fifty">50%</button>
-            </div>
-            <div class="grid-item">
-              <input type="number" name="" id="custom-tip" class="grid-custom-input" placeholder="Custom">
-            </div>
-          </div>
-        </div>
-
-        <div class="input-row">
-          <div class="label-row">
-            <label for="">Number of People</label>
-            <p class="alert-text">Can't be zero</p>
-          </div>
-          <div class="input-container">
-            <img src="./resources/images/icon-person.svg" alt="" class="input-icon-image">
-            <input type="number" name="" id="" class="input-field" id="people-input">
-          </div>
-        </div>
+      <div class="logo-container">
+        <img src="./resources/images/logo.svg" alt="" class="logo-image">
       </div>
 
-      <div class="main-right-column">
-        <div class="amount-rows-container">
-          <div class="amount-output-row">
-            <div class="amount_output_left_column">
-              <p class="top-white-text">Tip Amount</p>
-              <p class="down-light-text">/ person</p>
+      <div class="main-application-container">
+        <div class="main-left-column">
+          <div class="input-row">
+            <label for="">Bill</label>
+            <div class="input-container">
+              <img src="./resources/images/icon-dollar.svg" alt="" class="input-icon-image">
+              <input type="number" name="" id="bill-input" class="input-field">
             </div>
-            <p>$<span id="tip-amount-output">0.00</span></p>
           </div>
-          <div class="amount-output-row">
-            <div class="amount_output_left_column">
-              <p class="top-white-text">Total</p>
-              <p class="down-light-text">/ person</p>
+
+          <div class="tips-selection-column">
+            <label for="">Select Tip %</label>
+            <div class="tip-grids-container">
+              <div class="grid-item">
+                <button class="tip-button" id="five">5%</button>
+              </div>
+              <div class="grid-item">
+                <button class="tip-button" id="ten">10%</button>
+              </div>
+              <div class="grid-item">
+                <button class="tip-button" id="fifteen">15%</button>
+              </div>
+              <div class="grid-item">
+                <button class="tip-button" id="twenty-five">25%</button>
+              </div>
+              <div class="grid-item">
+                <button class="tip-button tip-button-selected" id="fifty">50%</button>
+              </div>
+              <div class="grid-item">
+                <input type="number" name="" id="custom-tip" class="grid-custom-input" placeholder="Custom">
+              </div>
             </div>
-            <p>$<span id="total-amount-output">0.00</span></p>
+          </div>
+
+          <div class="input-row">
+            <div class="label-row">
+              <label for="">Number of People</label>
+              <p class="alert-text">Can't be zero</p>
+            </div>
+            <div class="input-container">
+              <img src="./resources/images/icon-person.svg" alt="" class="input-icon-image">
+              <input type="number" name="" id="" class="input-field" id="people-input">
+            </div>
           </div>
         </div>
 
-        <button class="reset-button-empty" id="reset-button">Reset</button>
+        <div class="main-right-column">
+          <div class="amount-rows-container">
+            <div class="amount-output-row">
+              <div class="amount_output_left_column">
+                <p class="top-white-text">Tip Amount</p>
+                <p class="down-light-text">/ person</p>
+              </div>
+              <p>$<span id="tip-amount-output">0.00</span></p>
+            </div>
+            <div class="amount-output-row">
+              <div class="amount_output_left_column">
+                <p class="top-white-text">Total</p>
+                <p class="down-light-text">/ person</p>
+              </div>
+              <p>$<span id="total-amount-output">0.00</span></p>
+            </div>
+          </div>
+
+          <button class="reset-button-empty" id="reset-button">Reset</button>
+        </div>
+        </d>
       </div>
     </main>
-
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://github.com/romrauq">John Quarmor</a>.

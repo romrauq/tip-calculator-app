@@ -122,9 +122,10 @@ label {
 }
 .grid-custom-input {
 	color: var(--Very-Dark-Cyan);
-	font-size: 24px;
+	font-size: 22px;
+	font-family: Space Mono;
 	text-align: right;
-	padding: 13px 10px;
+	padding: 13px 10px 13px 0;
 	width: 100px;
 	border: 2px solid var(--White);
 	border-radius: 5px;

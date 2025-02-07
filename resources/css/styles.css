@@ -156,6 +156,7 @@ label {
 .alert-text {
 	color: var(--Red);
 	font-size: 10px;
+	display: none;
 }
 .main-right-column {
 	display: flex;

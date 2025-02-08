@@ -10,3 +10,79 @@ const people_input = document.getElementById("people-input");
 const tip_amount = document.getElementById("tip-amount-output");
 const total_amount = document.getElementById("total-amount-output");
 const reset_button = document.getElementById("reset-button");
+
+let bill;
+let percentage;
+let people;
+let tip_per_person;
+let total_payment_amount;
+
+bill_input.addEventListener("blur", () => {
+	if (bill_input.value != "") {
+		bill = parseInt(bill_input.value);
+		// console.log(bill);
+	}
+	calculateAmounts();
+});
+
+// Assign buttons variables into arrays paired with their associated numerical values:
+const grid_buttons = [
+	[five, 5],
+	[ten, 10],
+	[fifteen, 15],
+	[twenty_five, 25],
+	[fifty, 50],
+];
+
+grid_buttons.map((item) => {
+	// Event listener to get the value of user selected tip percentage button:
+	item[0].addEventListener("click", () => {
+		//Map through all percentage tip buttons & remove class value:
+		grid_buttons.map((item) => {
+			item[0].classList.remove("tip-button-selected");
+		});
+
+		// Add class value to the currently selected button element:
+		item[0].classList.add("tip-button-selected");
+		percentage = item[1]; // Assign associated numerical value to percentage varisble.
+		// console.log(percentage);
+		calculateAmounts();
+	});
+});
+
+// Event listener to get value of from tip percentage input field:
+custom_tip.addEventListener("blur", () => {
+	if (custom_tip.value != "") {
+		// Map through all percentage tip buttons & remove class value:
+		grid_buttons.map((item) => {
+			item[0].classList.remove("tip-button-selected");
+		});
+		percentage = parseInt(custom_tip.value);
+		// console.log(percentage);
+	}
+	calculateAmounts();
+});
+
+// Event listener to get value of number of people:
+people_input.addEventListener("blur", () => {
+	if (parseInt(people_input.value) == 0) {
+		alert_text.textContent = "Can't be zero";
+		alert_text.style.display = "block";
+	} else if (people_input.value != "") {
+		people = parseInt(people_input.value);
+		alert_text.style.display = "none";
+		// console.log(people);
+	} else {
+		alert_text.textContent = "Can't be left empty";
+		alert_text.style.display = "block";
+	}
+	calculateAmounts();
+});
+
+function calculateAmounts() {
+	if (bill > 1 && percentage > 1 && people > 1) {
+		console.log("All inputs filled.");
+	} else {
+		console.log("All inputs not filled.");
+	}
+}

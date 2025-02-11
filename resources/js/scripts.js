@@ -102,6 +102,9 @@ function calculateAmounts() {
 			people_input.value = "";
 			tip_amount.textContent = "0.00";
 			total_amount.textContent = "0.00";
+			grid_buttons.map((item) => {
+				item[0].classList.remove("tip-button-selected");
+			});
 			reset_button.classList.remove("reset-button-completed");
 		});
 	} else {

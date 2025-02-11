@@ -187,6 +187,9 @@ label {
 .amount_output_left_column {
 	font-size: 10px;
 }
+.amount-output-text {
+	font-size: 28px;
+}
 .top-white-text {
 	color: var(--White);
 }

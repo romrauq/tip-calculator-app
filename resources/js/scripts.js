@@ -19,7 +19,7 @@ let total_payment_amount;
 
 bill_input.addEventListener("blur", () => {
 	if (bill_input.value != "") {
-		bill = parseInt(bill_input.value);
+		bill = parseFloat(bill_input.value);
 		// console.log(bill);
 	}
 	calculateAmounts();
@@ -57,7 +57,7 @@ custom_tip.addEventListener("blur", () => {
 		grid_buttons.map((item) => {
 			item[0].classList.remove("tip-button-selected");
 		});
-		percentage = parseInt(custom_tip.value);
+		percentage = parseFloat(custom_tip.value);
 		// console.log(percentage);
 	}
 	calculateAmounts();
@@ -65,11 +65,11 @@ custom_tip.addEventListener("blur", () => {
 
 // Event listener to get value of number of people:
 people_input.addEventListener("blur", () => {
-	if (parseInt(people_input.value) == 0) {
+	if (parseFloat(people_input.value) == 0) {
 		alert_text.textContent = "Can't be zero";
 		alert_text.style.display = "block";
 	} else if (people_input.value != "") {
-		people = parseInt(people_input.value);
+		people = parseFloat(people_input.value);
 		alert_text.style.display = "none";
 		// console.log(people);
 	} else {
@@ -82,6 +82,24 @@ people_input.addEventListener("blur", () => {
 function calculateAmounts() {
 	if (bill > 1 && percentage > 1 && people > 1) {
 		console.log("All inputs filled.");
+		let split_bill = bill / people;
+		let tip_payment = split_bill * (percentage / 100);
+		let total_payment = split_bill + tip_payment;
+		console.log(split_bill);
+		console.log(tip_payment);
+		console.log(total_payment);
+
+		tip_amount.textContent = tip_payment.toFixed(2); // Dynamically modify text content.
+		total_amount.textContent = total_payment.toFixed(2); // Dynamically modify text content.
+		reset_button.classList.add("reset-button-completed");
+		reset_button.addEventListener("click", () => {
+			bill_input.value = "";
+			percentage.value = "";
+			people_input.value = "";
+			tip_amount.textContent = "0.00";
+			total_amount.textContent = "0.00";
+			reset_button.classList.remove("reset-button-completed");
+		});
 	} else {
 		console.log("All inputs not filled.");
 	}

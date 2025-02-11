@@ -70,6 +70,7 @@ main {
 label {
 	color: var(--Grayish-Cyan);
 	font-size: 10px;
+	font-weight: 800;
 }
 .input-container {
 	display: flex;

@@ -6,6 +6,7 @@ const twenty_five = document.getElementById("twenty-five");
 const fifty = document.getElementById("fifty");
 const custom_tip = document.getElementById("custom-tip");
 const alert_text = document.getElementById("alert-text");
+const people_input_container = document.getElementById("people-input-container");
 const people_input = document.getElementById("people-input");
 const tip_amount = document.getElementById("tip-amount-output");
 const total_amount = document.getElementById("total-amount-output");
@@ -68,13 +69,16 @@ people_input.addEventListener("blur", () => {
 	if (parseFloat(people_input.value) == 0) {
 		alert_text.textContent = "Can't be zero";
 		alert_text.style.display = "block";
+		people_input_container.style.border = "2px solid hsl(0, 100%, 66%)";
 	} else if (people_input.value != "") {
 		people = parseFloat(people_input.value);
 		alert_text.style.display = "none";
+		people_input_container.style.border = "2px solid hsl(172, 67%, 45%)";
 		// console.log(people);
 	} else {
 		alert_text.textContent = "Can't be left empty";
 		alert_text.style.display = "block";
+		people_input_container.style.border = "2px solid hsl(0, 100%, 66%)";
 	}
 	calculateAmounts();
 });
